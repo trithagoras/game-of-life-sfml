@@ -2,7 +2,8 @@
 #include "game.h"
 #include <iostream>
 
-const int CellSize = 20;
+const int WindowSize = 600;
+const int CellSize = WindowSize / gol::Cols;
 
 void draw_grid(sf::RenderWindow& window) {
     auto size = window.getSize();
@@ -38,7 +39,7 @@ void draw_game_state(sf::RenderWindow& window, gol::Game& game) {
 
 int main() {
     // create the window
-    sf::RenderWindow window(sf::VideoMode(800, 800), "Game of Life", sf::Style::Titlebar | sf::Style::Close);
+    sf::RenderWindow window(sf::VideoMode(WindowSize, WindowSize), "Game of Life", sf::Style::Titlebar | sf::Style::Close);
 
     // create the game object
     auto game = gol::Game();

@@ -5,8 +5,9 @@
 namespace gol {
 	constexpr int ALIVE = 1;
 	constexpr int DEAD = 0;
-	const int Cols = 30;
-	const int Rows = 30;
+	const int GameSize = 30;
+	const int Cols = GameSize;
+	const int Rows = GameSize;
 
 	class Game {
 	public:
